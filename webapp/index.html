@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Getting XML Data from Server...</legend>
+		<form action="#">
+			<label for="city-type-1">City Type:</label>
+			<select id="city-type-1">
+				<option value="top-5-cities">
+					Largest Five US Cities</option>
+				<option value="second-5-cities">
+					Second Five US Cities</option>
+
+			</select>
+	<br/>
+	<input type="button" value="Show Cities" onclick='xmlCityTable("city-type-1", "xml-city-table")'/>
+
+		</form>
+	<p/>
+	<div id="xml-city-table"></div>
+</fieldset>
+
+<script type="text/javascript">
+	function xmlCityTable() {
+		
+	}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
