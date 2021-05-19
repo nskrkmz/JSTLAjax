@@ -9,7 +9,7 @@
 		<legend>Getting XML Data from Server...</legend>
 		<form action="#">
 			<label for="city-type-1">City Type:</label>
-			<select id="city-type-1">
+			<select id="city-type-1" name="city-type-1">
 				<option value="top-5-cities">
 					Largest Five US Cities</option>
 				<option value="second-5-cities">
@@ -25,16 +25,27 @@
 </fieldset>
 
 <script type="text/javascript">
-	function xmlCityTable() {
-		
-	}
+
+	
+
+	function xmlCityTable(type,table) {
+    	var xhr = new XMLHttpRequest();
+    	var e = document.getElementById("city-type-1")
+	 	document.getElementById(type).value = e.options[e.selectedIndex].value ;
+	 	var deger = document.getElementById(type).value;
+	 	
+	 	var format = "xml";
+	 	var formatDeger = "xml" ;
+	 	
+    	xhr.open('POST', 'http://localhost:8080/JSTLAjax/ShowCities?city-type-1='+deger+'&format='+formatDeger, true);
+        xhr.send("${pageContext.request.contextPath}/cities/ShowCities");
+       			
+}
 </script>
 
+<script type="text/javascript">
 
-
-
-
-
+</script>
 
 </body>
 </html>

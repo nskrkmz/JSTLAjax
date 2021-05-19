@@ -9,8 +9,9 @@
 <c:forEach var="city" items="${cities}">
 	<city>
 		<name>${city.name}</name>
-		<time>${city.shortTime}</time>
+		<time>${city.time}</time>
 		<population>${city.population}</population>
 	</city>
 </c:forEach>
 </cities>
+
